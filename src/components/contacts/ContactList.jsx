@@ -10,13 +10,8 @@ export default function ContactList({ contacts, filter, delFunc }) {
         {contacts
           .filter(contact => {
             return contact.name.toLowerCase().includes(filter);
-            // console.log(contact);
-            // console.log(contact.name);
-            // console.log(this.state.filter);
-            // console.log(contact.name.includes(this.state.filter));
           })
           .map(contact => {
-            //   console.log(contact.id);
             return (
               <Element key={contact.id}>
                 <ContactEl contact={contact} delFunc={delFunc} />
